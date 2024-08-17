@@ -1,9 +1,12 @@
 import openai
+from dotenv import load_dotenv
 
-openai.api_key = "46fe65fb0a7a46218fa8f83655c4f31b"
-openai.api_base = "https://fixitgptfourindia.openai.azure.com/"
-openai.api_version = "2024-02-01"
-openai.api_type = "azure"
+load_dotenv()
+
+openai.api_key = os.getenv("openai_api_key")
+openai.api_base = os.getenv("openai_api_base")
+openai.api_version = os.getenv("openai_api_version")
+openai.api_type = os.getenv("openai_api_type")
 
 history = []
 
